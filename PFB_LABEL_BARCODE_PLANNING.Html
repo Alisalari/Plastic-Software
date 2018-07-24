@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- -------------------------------------------------------------
+H E A D
+-----------------------------------------------------------------> 
+  <head>
+    <title>LABEL BARCODE PLANNING</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- -------------------------------------------------------------
+S C R I P T   &   L I N K
+-----------------------------------------------------------------> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css3/theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script type="text/javascript" src="../JavaScript/JavaScript_fingerprint.js"></script>
+    <script type="text/javascript" src="../AngularJs/Angular_PFB_LABEL_BARCODE_PLANNING.js"></script>
+    <script type="text/javascript" src="../JavaScript/JavaScript_PFB_LABEL_BARCODE_PLANNING_All_OnLoad_Routines.js"></script>
+  </head>
+<!-- -------------------------------------------------------------
+B O D Y
+-----------------------------------------------------------------> 
+  <body ng-app="app" ng-controller="PFB_LABEL_BARCODE_PLANNING_Common" onload="PFB_LABEL_BARCODE_PLANNING_onload()" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <header>
+<!-- -------------------------------------------------------------
+M E N U
+-----------------------------------------------------------------> 
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><sup>LABEL BARCODE PLANNING</sup></a>
+          </div>
+          <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><sub>Setting</sub><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="GEN_STATION.Html">Station</a></li>
+                    <li><a href="GEN_YESNO.Html">Yes or No</a></li>
+                    <li><a href="GEN_MNUOBJTYPE.Html">Menu Object Type</a></li>
+                    <li><a href="GEN_MNUACCESSFLAG.Html">MNU Access Flag</a></li>
+                    <li><a href="GEN_MNUMAIN.Html">Main Menu</a></li>
+                    <li><a href="GEN_MNU.Html">Menu</a></li>
+                    <li><a href="GEN_MNUACCESS.Html">Mnue Access</a></li>
+                    <li><a href="GEN_U.Html">Users</a></li>
+                    <li><a href="GEN_SURVEY.Html">Users survey results</a></li>
+                    <li><a href="GEN_LOG.Html">LOG</a></li>
+                    <li><a href="GEN_LOG_FIELDS.Html">LOG Fields</a></li>
+                    <li><a href="GEN_LAST_STATUS.Html">FingerPrint LAST STATUS</a></li>
+                    <li><a href="GEN_CALENDARS.Html">Calendars</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><sub>Base Data</sub><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="PFB_MATERIAL.Html">MATERIAL</a></li>
+                    <li><a href="PFB_ADDITIVES.Html">ADDITIVES</a></li>
+                    <li><a href="PFB_COLOR.Html">COLOR</a></li>
+                    <li><a href="PFB_GRADE.Html">GRADE</a></li>
+                    <li><a href="PFB_DIE_MOLD_TYPE.Html">DIE/MOLD/TYPE</a></li>
+                    <li><a href="PFB_PACKAGING.Html">PACKAGING</a></li>
+                    <li><a href="PFB_MEASUREMENT.Html">MEASUREMENT</a></li>
+                    <li><a href="PFB_MACHINE.Html">MACHINE</a></li>
+                    <li><a href="PFB_STORAGE.Html">STORAGE</a></li>
+                    <li><a href="PFB_OPERATOR.Html">OPERATOR</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><sub>Planning & Barcode</sub><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="PFB_LABEL_BARCODE_PLANNING.Html">LABEL BARCODE PLANNING</a></li>
+                    <li><a href="PFB_SERIAL_PORT_TEST.Html">SERIAL PORT TEST</a></li>
+                    <li><a href="PFB_LABEL_BARCODE.Html">LABEL BARCODE</a></li>
+                    <li><a href="PFB_LABEL_BARCODE_PLANNING1.Html">LABEL BARCODE PLANNING</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><sub>Storage</sub><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="PFB_STORAGE_TRANSACTION.Html">STORAGE TRANSACTION</a></li>
+                    <li><a href="PFB_STORAGE_BARCODE_INVENTORY.Html">STORAGE BARCODE INVENTORY</a></li>
+                    <li><a href="PFB_STORAGE_INVENTORY.Html">STORAGE INVENTORY</a></li>
+                    <li><a href="PFB_STORAGE_BARCODE_STOCK_CARD.Html">STORAGE BARCODE STOCK CARD</a></li>
+                    <li><a href="PFB_STORAGE_STOCK_CARD.Html">STORAGE STOCK CARD</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><sub>Production</sub><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="PFB_PRODUCTING_INPUT_OR_OUTPUT.Html">PRODUCTING INPUT OR OUTPUT</a></li>
+                    <li><a href="PFB_PRODUCT_FORMULA.Html">PRODUCT FORMULA</a></li>
+                    <li><a href="PFB_CALCULATE_THE_DEVIATION_FROM_FORMULA.Html">CALCULATE THE DEVIATION FROM FORMULA</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><sub> ,</sub><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                  </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><sub> ,</sub><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                  </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><sub>Management Report</sub><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="PFB_HOW_MUCH_FROM_THIS_MATERIAL.Html">HOW MUCH FROM THIS MATERIAL</a></li>
+                    <li><a href="PFB_HOW_MUCH_FROM_THIS_ADDITIVES.Html">HOW MUCH FROM THIS ADDITIVES</a></li>
+                    <li><a href="PFB_HOW_MUCH_WITH_THIS_DIE_MOLD_TYPE.Html">HOW MUCH WITH THIS DIE/MOLD/TYPE</a></li>
+                    <li><a href="PFB_HOW_MUCH_WITH_THIS_MACHINE.Html">HOW MUCH WITH THIS MACHINE</a></li>
+                    <li><a href="PFB_HOW_MUCH_INTO_THIS_STORAGE.Html">HOW MUCH INTO THIS STORAGE</a></li>
+                    <li><a href="PFB_HOW_MUCH_WITH_THIS_OPERATOR.Html">HOW MUCH WITH THIS OPERATOR</a></li>
+                    <li><a href="PFB_HOW_MUCH_DAILY.Html">HOW MUCH DAILY</a></li>
+                    <li><a href="PFB_HOW_MUCH_MONTHLY.Html">HOW MUCH MONTHLY</a></li>
+                    <li><a href="PFB_HOW_MUCH_YEARLY.Html">HOW MUCH YEARLY</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+<!-- -------------------------------------------------------------
+S E C T I O N  -  Main Contenet 
+-----------------------------------------------------------------> 
+    <section> "
+      <div class="container">
+        <form class="form-inline" action="/action_page.php">
+          <h1><br></h1>
+          <div ng-controller="PFB_LABEL_BARCODE_PLANNING_SERIAL_default" class="form-group">
+            <label id="labelSERIAL" for="SERIAL">SERIAL…</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_SERIAL" ng-blur ="getdetails($event.target)" type="number" class="form-control" id="formFieldSERIAL" placeholder="number" name="SERIAL">
+          </div>          <div ng-controller="PFB_LABEL_BARCODE_PLANNING_DATE_default" class="form-group">
+            <label id="labelDATE" for="DATE">DATE…</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_DATE" ng-blur ="getdetails($event.target)" type="date" class="form-control" id="formFieldDATE" placeholder="date" name="DATE">
+          </div>
+        <fieldset>
+          <legend>MATERIAL:</legend>
+          <div class="form-group">
+            <label id="labelListMATERIAL" for="MATERIAL">MATERIAL…</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_MATERIAL" ng-blur ="getdetails($event.target)" type="text" id="formListMATERIAL" list="formDataListMATERIAL" placeholder="e.g. datalist"> 
+            <datalist id="formDataListMATERIAL"></datalist>
+          </div>
+          <div class="form-group">
+            <label id="labelListADDITIVES" for="ADDITIVES">ADDITIVES…</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_ADDITIVES" ng-blur ="getdetails($event.target)" type="text" id="formListADDITIVES" list="formDataListADDITIVES" placeholder="e.g. datalist"> 
+            <datalist id="formDataListADDITIVES"></datalist>
+          </div>
+          <div class="form-group">
+            <label id="labelListCOLOR" for="COLOR">COLOR…</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_COLOR" ng-blur ="getdetails($event.target)" type="text" id="formListCOLOR" list="formDataListCOLOR" placeholder="e.g. datalist"> 
+            <datalist id="formDataListCOLOR"></datalist>
+          </div>
+          <div class="form-group">
+            <label id="labelListGRADE" for="GRADE">GRADE…</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_GRADE" ng-blur ="getdetails($event.target)" type="text" id="formListGRADE" list="formDataListGRADE" placeholder="e.g. datalist"> 
+            <datalist id="formDataListGRADE"></datalist>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>SHAPE:</legend>
+          <div class="form-group">
+            <label id="labelListDIE_MOLD_TYPE" for="DIE_MOLD_TYPE">DIE/MOLD/TYPE…</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_DIE_MOLD_TYPE" ng-blur ="getdetails($event.target)" type="text" id="formListDIE_MOLD_TYPE" list="formDataListDIE_MOLD_TYPE" placeholder="e.g. datalist"> 
+            <datalist id="formDataListDIE_MOLD_TYPE"></datalist>
+          </div>          <div ng-controller="PFB_LABEL_BARCODE_PLANNING_PRODUCT_LENGHT_default" class="form-group">
+            <label id="labelPRODUCT_LENGHT" for="PRODUCT_LENGHT">PRODUCT LENGHT</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_PRODUCT_LENGHT" ng-blur ="getdetails($event.target)" type="number" class="form-control" id="formFieldPRODUCT_LENGHT" placeholder="number" name="PRODUCT_LENGHT">
+          </div>          <div ng-controller="PFB_LABEL_BARCODE_PLANNING_PRODUCT_WIDTH_default" class="form-group">
+            <label id="labelPRODUCT_WIDTH" for="PRODUCT_WIDTH">PRODUCT WIDTH</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_PRODUCT_WIDTH" ng-blur ="getdetails($event.target)" type="number" class="form-control" id="formFieldPRODUCT_WIDTH" placeholder="number" name="PRODUCT_WIDTH">
+          </div>          <div ng-controller="PFB_LABEL_BARCODE_PLANNING_PRODUCT_TICKNESS_default" class="form-group">
+            <label id="labelPRODUCT_TICKNESS" for="PRODUCT_TICKNESS">PRODUCT TICKNESS</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_PRODUCT_TICKNESS" ng-blur ="getdetails($event.target)" type="number" class="form-control" id="formFieldPRODUCT_TICKNESS" placeholder="number" name="PRODUCT_TICKNESS">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>PACKAGING:</legend>
+          <div class="form-group">
+            <label id="labelListPACKAGING" for="PACKAGING">PACKAGING…</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_PACKAGING" ng-blur ="getdetails($event.target)" type="text" id="formListPACKAGING" list="formDataListPACKAGING" placeholder="e.g. datalist"> 
+            <datalist id="formDataListPACKAGING"></datalist>
+          </div>          <div ng-controller="PFB_LABEL_BARCODE_PLANNING_NO_IN_BAG_default" class="form-group">
+            <label id="labelNO_IN_BAG" for="NO_IN_BAG">NO IN BAG</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_NO_IN_BAG" ng-blur ="getdetails($event.target)" type="number" class="form-control" id="formFieldNO_IN_BAG" placeholder="number" name="NO_IN_BAG">
+          </div>          <div ng-controller="PFB_LABEL_BARCODE_PLANNING_BAG_IN_PACK_default" class="form-group">
+            <label id="labelBAG_IN_PACK" for="BAG_IN_PACK">BAG IN PACKAGE</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_BAG_IN_PACK" ng-blur ="getdetails($event.target)" type="number" class="form-control" id="formFieldBAG_IN_PACK" placeholder="number" name="BAG_IN_PACK">
+          </div>          <div ng-controller="PFB_LABEL_BARCODE_PLANNING_TOTAL_NO_default" class="form-group">
+            <label id="labelTOTAL_NO" for="TOTAL_NO">TOTAL NO</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_TOTAL_NO" ng-blur ="getdetails($event.target)" type="number" class="form-control" id="formFieldTOTAL_NO" placeholder="number" name="TOTAL_NO">
+          </div>
+          <div class="form-group">
+            <label id="labelListMEASUREMENT" for="MEASUREMENT">MEASUREMENT…</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_MEASUREMENT" ng-blur ="getdetails($event.target)" type="text" id="formListMEASUREMENT" list="formDataListMEASUREMENT" placeholder="e.g. datalist"> 
+            <datalist id="formDataListMEASUREMENT"></datalist>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>PRODUCTION LINE:</legend>
+          <div class="form-group">
+            <label id="labelListMACHINE" for="MACHINE">MACHINE…</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_MACHINE" ng-blur ="getdetails($event.target)" type="text" id="formListMACHINE" list="formDataListMACHINE" placeholder="e.g. datalist"> 
+            <datalist id="formDataListMACHINE"></datalist>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>STORAGE:</legend>
+          <div class="form-group">
+            <label id="labelListSTORAGE" for="STORAGE">STORAGE…</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_STORAGE" ng-blur ="getdetails($event.target)" type="text" id="formListSTORAGE" list="formDataListSTORAGE" placeholder="e.g. datalist"> 
+            <datalist id="formDataListSTORAGE"></datalist>
+          </div>
+        </fieldset>          <div ng-controller="PFB_LABEL_BARCODE_PLANNING_PLANNING_NAME_default" class="form-group">
+            <label id="labelPLANNING_NAME" for="PLANNING_NAME">PLANNING NAME</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_PLANNING_NAME" ng-blur ="getdetails($event.target)" type="text" class="form-control" id="formFieldPLANNING_NAME" placeholder="text" name="PLANNING_NAME">
+          </div>          <div ng-controller="PFB_LABEL_BARCODE_PLANNING_DETAIL_default" class="form-group">
+            <label id="labelDETAIL" for="DETAIL">DETAIL</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_DETAIL" ng-blur ="getdetails($event.target)" type="text" class="form-control" id="formFieldDETAIL" placeholder="text" name="DETAIL">
+          </div>          <div ng-controller="PFB_LABEL_BARCODE_PLANNING_FROM_DATE_default" class="form-group">
+            <label id="labelFROM_DATE" for="FROM_DATE">FROM DATE</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_FROM_DATE" ng-blur ="getdetails($event.target)" type="text" class="form-control" id="formFieldFROM_DATE" placeholder="text" name="FROM_DATE">
+          </div>          <div ng-controller="PFB_LABEL_BARCODE_PLANNING_TO_DATE_default" class="form-group">
+            <label id="labelTO_DATE" for="TO_DATE">TO DATE</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_TO_DATE" ng-blur ="getdetails($event.target)" type="text" class="form-control" id="formFieldTO_DATE" placeholder="text" name="TO_DATE">
+          </div>          <div ng-controller="PFB_LABEL_BARCODE_PLANNING_FROM_NO_default" class="form-group">
+            <label id="labelFROM_NO" for="FROM_NO">FROM SERIAL</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_FROM_NO" ng-blur ="getdetails($event.target)" type="text" class="form-control" id="formFieldFROM_NO" placeholder="text" name="FROM_NO">
+          </div>          <div ng-controller="PFB_LABEL_BARCODE_PLANNING_TO_NO_default" class="form-group">
+            <label id="labelTO_NO" for="TO_NO">TO SERIAL</label>
+            <input ng-model="PFB_LABEL_BARCODE_PLANNING_TO_NO" ng-blur ="getdetails($event.target)" type="text" class="form-control" id="formFieldTO_NO" placeholder="text" name="TO_NO">
+          </div>
+        </form>
+      </div>
+    </section>
+<!-- -------------------------------------------------------------
+D E T A I L S   -    Fileds For Search in Saved Data
+-----------------------------------------------------------------> 
+    <h5><br></h5>
+    <details>
+      <summary>Search from saved in LABEL BARCODE PLANNING records</summary>
+      <div class="container">
+        <form class="form-inline" action="/action_page.php">
+          <div class="form-group">
+            <label id="searchLabelDATE" for="DATE_Filter">DATE…</label>
+            <input type="date" class="form-control" id="searchFieldDATE_Filter" placeholder="date" name="DATE">
+          </div>
+          <div class="form-group">
+            <label id="searchLabelListMATERIAL" for="MATERIAL">MATERIAL…</label>
+            <input type="text" id="searchListMATERIAL" list="searchDataListMATERIAL" placeholder="e.g. datalist"> 
+            <datalist id="searchDataListMATERIAL"></datalist>
+          </div>
+          <div class="form-group">
+            <label id="searchLabelListADDITIVES" for="ADDITIVES">ADDITIVES…</label>
+            <input type="text" id="searchListADDITIVES" list="searchDataListADDITIVES" placeholder="e.g. datalist"> 
+            <datalist id="searchDataListADDITIVES"></datalist>
+          </div>
+          <div class="form-group">
+            <label id="searchLabelListCOLOR" for="COLOR">COLOR…</label>
+            <input type="text" id="searchListCOLOR" list="searchDataListCOLOR" placeholder="e.g. datalist"> 
+            <datalist id="searchDataListCOLOR"></datalist>
+          </div>
+          <div class="form-group">
+            <label id="searchLabelListGRADE" for="GRADE">GRADE…</label>
+            <input type="text" id="searchListGRADE" list="searchDataListGRADE" placeholder="e.g. datalist"> 
+            <datalist id="searchDataListGRADE"></datalist>
+          </div>
+          <div class="form-group">
+            <label id="searchLabelListDIE_MOLD_TYPE" for="DIE_MOLD_TYPE">DIE/MOLD/TYPE…</label>
+            <input type="text" id="searchListDIE_MOLD_TYPE" list="searchDataListDIE_MOLD_TYPE" placeholder="e.g. datalist"> 
+            <datalist id="searchDataListDIE_MOLD_TYPE"></datalist>
+          </div>
+          <div class="form-group">
+            <label id="searchLabelPRODUCT_LENGHT" for="PRODUCT_LENGHT_Filter">PRODUCT LENGHT</label>
+            <input type="number" class="form-control" id="searchFieldPRODUCT_LENGHT_Filter" placeholder="number" name="PRODUCT_LENGHT">
+          </div>
+          <div class="form-group">
+            <label id="searchLabelPRODUCT_WIDTH" for="PRODUCT_WIDTH_Filter">PRODUCT WIDTH</label>
+            <input type="number" class="form-control" id="searchFieldPRODUCT_WIDTH_Filter" placeholder="number" name="PRODUCT_WIDTH">
+          </div>
+          <div class="form-group">
+            <label id="searchLabelPRODUCT_TICKNESS" for="PRODUCT_TICKNESS_Filter">PRODUCT TICKNESS</label>
+            <input type="number" class="form-control" id="searchFieldPRODUCT_TICKNESS_Filter" placeholder="number" name="PRODUCT_TICKNESS">
+          </div>
+          <div class="form-group">
+            <label id="searchLabelListPACKAGING" for="PACKAGING">PACKAGING…</label>
+            <input type="text" id="searchListPACKAGING" list="searchDataListPACKAGING" placeholder="e.g. datalist"> 
+            <datalist id="searchDataListPACKAGING"></datalist>
+          </div>
+          <div class="form-group">
+            <label id="searchLabelNO_IN_BAG" for="NO_IN_BAG_Filter">NO IN BAG</label>
+            <input type="number" class="form-control" id="searchFieldNO_IN_BAG_Filter" placeholder="number" name="NO_IN_BAG">
+          </div>
+          <div class="form-group">
+            <label id="searchLabelBAG_IN_PACK" for="BAG_IN_PACK_Filter">BAG IN PACKAGE</label>
+            <input type="number" class="form-control" id="searchFieldBAG_IN_PACK_Filter" placeholder="number" name="BAG_IN_PACK">
+          </div>
+          <div class="form-group">
+            <label id="searchLabelTOTAL_NO" for="TOTAL_NO_Filter">TOTAL NO</label>
+            <input type="number" class="form-control" id="searchFieldTOTAL_NO_Filter" placeholder="number" name="TOTAL_NO">
+          </div>
+          <div class="form-group">
+            <label id="searchLabelListMEASUREMENT" for="MEASUREMENT">MEASUREMENT…</label>
+            <input type="text" id="searchListMEASUREMENT" list="searchDataListMEASUREMENT" placeholder="e.g. datalist"> 
+            <datalist id="searchDataListMEASUREMENT"></datalist>
+          </div>
+          <div class="form-group">
+            <label id="searchLabelListMACHINE" for="MACHINE">MACHINE…</label>
+            <input type="text" id="searchListMACHINE" list="searchDataListMACHINE" placeholder="e.g. datalist"> 
+            <datalist id="searchDataListMACHINE"></datalist>
+          </div>
+          <div class="form-group">
+            <label id="searchLabelListSTORAGE" for="STORAGE">STORAGE…</label>
+            <input type="text" id="searchListSTORAGE" list="searchDataListSTORAGE" placeholder="e.g. datalist"> 
+            <datalist id="searchDataListSTORAGE"></datalist>
+          </div>
+          <div class="form-group">
+            <label id="searchLabelPLANNING_NAME" for="PLANNING_NAME_Filter">PLANNING NAME</label>
+            <input type="text" class="form-control" id="searchFieldPLANNING_NAME_Filter" placeholder="text" name="PLANNING_NAME">
+          </div>
+          <div class="form-group">
+            <label id="searchLabelFROM_DATE" for="FROM_DATE_Filter">FROM DATE</label>
+            <input type="text" class="form-control" id="searchFieldFROM_DATE_Filter" placeholder="text" name="FROM_DATE">
+          </div>
+          <div class="form-group">
+            <label id="searchLabelTO_DATE" for="TO_DATE_Filter">TO DATE</label>
+            <input type="text" class="form-control" id="searchFieldTO_DATE_Filter" placeholder="text" name="TO_DATE">
+          </div>
+          <div class="form-group">
+            <label id="searchLabelFROM_NO" for="FROM_NO_Filter">FROM SERIAL</label>
+            <input type="text" class="form-control" id="searchFieldFROM_NO_Filter" placeholder="text" name="FROM_NO">
+          </div>
+          <div class="form-group">
+            <label id="searchLabelTO_NO" for="TO_NO_Filter">TO SERIAL</label>
+            <input type="text" class="form-control" id="searchFieldTO_NO_Filter" placeholder="text" name="TO_NO">
+          </div>
+          <button ng-click="PFB_LABEL_BARCODE_PLANNING_Search()" class="btn btn-primary" type="button">Search</button>
+<!-- -------------------------------------------------------------
+T A B L E   -    Table of Search Result ( Saved Data )
+-----------------------------------------------------------------> 
+          <div class="container"  >
+            <div id="searchTable">
+
+
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </details>
+<!-- -------------------------------------------------------------
+B U T T O N   -    Form Button for Save & Print & Free form & Delete
+-----------------------------------------------------------------> 
+    <h5><br></h5>
+    Percentage of acceptable data:
+    <progress width="100%" value="0" max="100"></progress>
+    <button ng-click="PFB_LABEL_BARCODE_PLANNING_Submit()" class="form-inline" type="button">Submit</button>
+    <button ng-click="PFB_LABEL_BARCODE_PLANNING_Print()" class="form-inline" type="button">Print</button>
+    <button ng-click="PFB_LABEL_BARCODE_PLANNING_New()" class="inline" type="button">New Form</button>
+    <button ng-click="PFB_LABEL_BARCODE_PLANNING_Delete()" class="inline" type="button">Delete</button>
+<!-- -------------------------------------------------------------
+D E T A I L S   -    Page Help
+-----------------------------------------------------------------> 
+    <details>
+      <summary>User Manual of This Page</summary>
+      <p>This System based on a dataentery site with several pages.<br>Menu is dropdown and at top.
+        <br>&#x255F;  With click on menu item # 1 you can rich to several submenu as :
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/GEN_STATION.Html">Station</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/GEN_YESNO.Html">Yes or No</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/GEN_MNUOBJTYPE.Html">Menu Object Type</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/GEN_MNUACCESSFLAG.Html">MNU Access Flag</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/GEN_MNUMAIN.Html">Main Menu</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/GEN_MNU.Html">Menu</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/GEN_MNUACCESS.Html">Mnue Access</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/GEN_U.Html">Users</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/GEN_SURVEY.Html">Users survey results</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/GEN_LOG.Html">LOG</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/GEN_LOG_FIELDS.Html">LOG Fields</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/GEN_LAST_STATUS.Html">FingerPrint LAST STATUS</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/GEN_CALENDARS.Html">Calendars</a>
+        <br>&#x2551;  &#x2514;
+        <br>&#x255F;  With click on menu item # 2 you can rich to several submenu as :
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_MATERIAL.Html">MATERIAL</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_ADDITIVES.Html">ADDITIVES</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_COLOR.Html">COLOR</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_GRADE.Html">GRADE</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_DIE_MOLD_TYPE.Html">DIE/MOLD/TYPE</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_PACKAGING.Html">PACKAGING</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_MEASUREMENT.Html">MEASUREMENT</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_MACHINE.Html">MACHINE</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_STORAGE.Html">STORAGE</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_OPERATOR.Html">OPERATOR</a>
+        <br>&#x2551;  &#x2514;
+        <br>&#x255F;  With click on menu item # 3 you can rich to several submenu as :
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_LABEL_BARCODE_PLANNING.Html">LABEL BARCODE PLANNING</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_SERIAL_PORT_TEST.Html">SERIAL PORT TEST</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_LABEL_BARCODE.Html">LABEL BARCODE</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_LABEL_BARCODE_PLANNING1.Html">LABEL BARCODE PLANNING</a>
+        <br>&#x2551;  &#x2514;
+        <br>&#x255F;  With click on menu item # 4 you can rich to several submenu as :
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_STORAGE_TRANSACTION.Html">STORAGE TRANSACTION</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_STORAGE_BARCODE_INVENTORY.Html">STORAGE BARCODE INVENTORY</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_STORAGE_INVENTORY.Html">STORAGE INVENTORY</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_STORAGE_BARCODE_STOCK_CARD.Html">STORAGE BARCODE STOCK CARD</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_STORAGE_STOCK_CARD.Html">STORAGE STOCK CARD</a>
+        <br>&#x2551;  &#x2514;
+        <br>&#x255F;  With click on menu item # 5 you can rich to several submenu as :
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_PRODUCTING_INPUT_OR_OUTPUT.Html">PRODUCTING INPUT OR OUTPUT</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_PRODUCT_FORMULA.Html">PRODUCT FORMULA</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_CALCULATE_THE_DEVIATION_FROM_FORMULA.Html">CALCULATE THE DEVIATION FROM FORMULA</a>
+        <br>&#x2551;  &#x2514;
+        <br>&#x255F;  With click on menu item # 6 you can rich to several submenu as :
+        <br>&#x2551;  &#x2514;
+        <br>&#x255F;  With click on menu item # 7 you can rich to several submenu as :
+        <br>&#x2551;  &#x2514;
+        <br>&#x255F;  With click on menu item # 8 you can rich to several submenu as :
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_HOW_MUCH_FROM_THIS_MATERIAL.Html">HOW MUCH FROM THIS MATERIAL</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_HOW_MUCH_FROM_THIS_ADDITIVES.Html">HOW MUCH FROM THIS ADDITIVES</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_HOW_MUCH_WITH_THIS_DIE_MOLD_TYPE.Html">HOW MUCH WITH THIS DIE/MOLD/TYPE</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_HOW_MUCH_WITH_THIS_MACHINE.Html">HOW MUCH WITH THIS MACHINE</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_HOW_MUCH_INTO_THIS_STORAGE.Html">HOW MUCH INTO THIS STORAGE</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_HOW_MUCH_WITH_THIS_OPERATOR.Html">HOW MUCH WITH THIS OPERATOR</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_HOW_MUCH_DAILY.Html">HOW MUCH DAILY</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_HOW_MUCH_MONTHLY.Html">HOW MUCH MONTHLY</a>
+        <br>&#x2551;  &#x251C;  submenu with name <a href="../Html5.2/PFB_HOW_MUCH_YEARLY.Html">HOW MUCH YEARLY</a><br>&#x2551;  &#x2514;<br>&#x2559;
+      </p>
+
+    </details>
+<!-- -------------------------------------------------------------
+D E T A I L S   -    Page Settings
+-----------------------------------------------------------------> 
+    <details>
+      <summary>Page settings</summary>
+      <select id="changingThemes">
+        <optgroup label="General Themes">
+          <option value="../css3/theme.css">General Themes #1</option>
+          <option value="../css3/theme2.css">General Themes #2</option>
+        </optgroup>
+        <optgroup label="Accessibility">
+          <option value="../css3/theme3.css">High Contract Only</option>
+          <option value="../css3/theme4.css">Large Fonts Only</option>
+          <option value="../css3/theme5.css">Large Fonts + High Contract</option>
+        </optgroup>
+      </select>
+      <button ng-click="PFB_LABEL_BARCODE_PLANNING_Themes()"  class="btn btn-primary" type="button">Update</button>
+    </details>
+<!-- -------------------------------------------------------------
+D E T A I L S   -    Survey of Functionality & User Satisfaction
+-----------------------------------------------------------------> 
+    <details>
+      <summary>Survey</summary>
+      Successed Requirements
+      <select id="Successed"> 
+        <option value="80% -100%">80% -100%</option>
+        <option value="60% - 79%">60% - 79%</option>
+        <option value="40% - 59%">40% - 59%</option>
+        <option value="20% - 39%">20% - 39%</option>
+        <option value="0%  - 19%">0%  - 19%</option>
+        <option value="I don't know">I don't know</option>
+      </select>
+      Comfortable and Catisfaction
+      <select id="Comfortable">
+        <option value="Very Satisfied">Very Satisfied</option>
+        <option value="Satisfied">Satisfied</option>
+        <option value="OK">OK</option>
+        <option value="Dissatisfaction">Dissatisfaction</option>
+        <option value="Very Dissatisfaction">Very Dissatisfaction</option>
+        <option value="I don't know">I don't know</option>
+      </select>
+      <button ng-click="PFB_MATERIAL_Survey()" class="btn btn-primary" type="button">Send</button>
+    </details>
+<!-- -------------------------------------------------------------
+F O O T E R    -    Footer of Page
+-----------------------------------------------------------------> 
+    <footer>
+<!-- -------------------------------------------------------------
+D E T A I L S    -    Contact Addresses
+-----------------------------------------------------------------> 
+      Developed by <a href="mailto:Ali.Salari.Sh@gmail.com">Ali.Salari.Sh.</a>.<br>
+    </footer>
+  </body>
+</html>
